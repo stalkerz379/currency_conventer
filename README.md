@@ -51,7 +51,7 @@ Take the number of conicoins as the user input, сonvert it to the specified cur
 ## Stage 5: JSON and the Rates
 
 ### Description
-In the previous stages, we worked with different real-world currencies but the exchange rates were fixed. Unfortunately (or not, depending on your political stance), we don't really have fixed exchange rates in today's world. At this stage, you will have to work with the Internet to get the information! The (FloatRates)[http://www.floatrates.com/json-feeds.html] site contains a special JSON page for each currency. Your task is to make requests to these pages and download the actual data on the exchange rates of the US dollar and the euro. Remember, that the data is stored in JSON format.
+In the previous stages, we worked with different real-world currencies but the exchange rates were fixed. Unfortunately (or not, depending on your political stance), we don't really have fixed exchange rates in today's world. At this stage, you will have to work with the Internet to get the information! The [FloatRates](http://www.floatrates.com/json-feeds.html) site contains a special JSON page for each currency. Your task is to make requests to these pages and download the actual data on the exchange rates of the US dollar and the euro. Remember, that the data is stored in JSON format.
 
 ### Objectives
 There are many currency codes, for example, `RUB, ARS, HNL, AUD, MAD`, etc. Choose the one you like best and return the information about the exchange rates from the site specified above for only two currencies: `USD` and `EUR`.
