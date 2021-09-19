@@ -5,7 +5,7 @@
 ### Description
 Today we start our new project. It will be a simple currency converter. Every person sometimes needs to convert one currency to another. But we need to start easy, so for now, all you need to do is to print "Meet a conicoin!" Please, make sure that the output formatting of your program follows the example output formatting.
 
-###Objectives
+### Objectives
 Imagine that there is a cryptocurrency called `conicoin` ("coni" is just an anagram of the word "coin"). Greet conicoin as shown in the example below.
 
 ## Stage 2: Talking numbers
@@ -65,7 +65,7 @@ There are many currency codes, for example, `RUB, ARS, HNL, AUD, MAD`, etc. Choo
 ### Description
 At this stage, you need to specify what currency you want to exchange. Imagine that you came to the bank with some money in your pocket. You want to choose the best currency to exchange your money for. First, read the currency to exchange, then read the currency you might exchange your money for and the amount of money you want to exchange. Notice that the input number can have a fractional part!
 
-Parse the data from (FloatRates)[http://www.floatrates.com/json-feeds.html]. You can store it in any collection you want. It's called caching – a simple way to speed up the program. If we need to exchange the same currencies that we have already changed, we won't need to connect to the Internet, we only need to refer to the data in our cache.
+Parse the data from [FloatRates](http://www.floatrates.com/json-feeds.html). You can store it in any collection you want. It's called caching – a simple way to speed up the program. If we need to exchange the same currencies that we have already changed, we won't need to connect to the Internet, we only need to refer to the data in our cache.
 
 Check the cache — the required currency might be already in there, print the result afterward. Output the amount of money that the bank employee should give you.
 
@@ -73,7 +73,7 @@ Check the cache — the required currency might be already in there, print the r
 You're in the bank. Think about how much and what kind of currency you have.
 
 - [x] Take the currency code, the amount of money the user has, and the currency code that the user wants to receive as the user input.
-- [x] Retrieve the data from (FloatRates)[http://www.floatrates.com/json-feeds.html] as in the previous exercises.
+- [x] Retrieve the data from [FloatRates](http://www.floatrates.com/json-feeds.html) as in the previous exercises.
 - [x] Save the exchange rates for `USD` and `EUR`.
 - [x] Read the currency to exchange for and the amount of money.
 - [x] Take a look at the cache. Maybe you already have what you need?
