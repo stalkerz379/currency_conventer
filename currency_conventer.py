@@ -4,7 +4,7 @@ import json
 
 def get_currency_cost():
     try:
-        user_currency = input('Enter the name of the currency you have as a shorten version. (E.g. "USD", "EUR".) ').lower()
+        user_currency = input('Enter the the currency you have as a shorten version. (E.g. "USD", "EUR".) \n').lower()
         url = f'http://www.floatrates.com/daily/{user_currency}.json'
         get_currency_rate = requests.get(url)
         json_data = json.loads(get_currency_rate.text)
@@ -14,7 +14,7 @@ def get_currency_cost():
         return json_data, cached_currencies
     except json.decoder.JSONDecodeError:
         print('Wrong currency name, try again')
-        get_currency_cost()
+        return get_currency_cost()
 
 
 def get_rate_for_user_currency():
@@ -35,12 +35,12 @@ def get_rate_for_user_currency():
 
 def validate_user_input(json_data):
     try:
-        currency_exchange_on = input('Select the currency you want to get the rate of ').lower().strip()
-        amount_of_money = float(input('Enter amount of money you want to exchange '))
-        if currency_exchange_on == '!exit':
+        currency_exchange_on = input('Menu:\nType exit/!exit to close the program.\nOr select the currency you want to get the rate of:\n').lower().strip()
+        if currency_exchange_on == '!exit' or currency_exchange_on == 'exit':
             print('Bye!')
             exit()
-        elif amount_of_money < 0 or currency_exchange_on not in json_data.keys():
+        amount_of_money = float(input('Enter amount of money you want to exchange:\n'))
+        if amount_of_money < 0 or currency_exchange_on not in json_data.keys():
             raise ValueError
         else:
             return currency_exchange_on, amount_of_money
